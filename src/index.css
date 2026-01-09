@@ -1,0 +1,61 @@
+:root {
+  --primary-color: #215E4C;
+  --secondary-color: #3B7D62; 
+  --accent-color: #F2C94C;
+  --light-green: #E8F5E9;
+  --text-dark: #333333;
+  --text-light: #F9F9F9;
+  --bs-primary: #215E4C; /* Override Bootstrap Primary */
+  --bs-success: #28a745;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text-dark);
+  background-color: #f5f5f5;
+}
+
+.text-primary { color: var(--primary-color) !important; }
+.bg-primary { background-color: var(--primary-color) !important; }
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+/* Custom Utilities */
+.h-100vh { height: 100vh; }
+.object-fit-cover { object-fit: cover; }
+.cursor-pointer { cursor: pointer; }
+
+/* Dashboard Sidebar */
+.sidebar {
+  background-color: var(--primary-color);
+  color: white;
+  min-height: 100vh;
+}
+.sidebar .nav-link {
+  color: rgba(255,255,255,0.8);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 4px 10px;
+  transition: all 0.2s;
+}
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+  background-color: rgba(255,255,255,0.2);
+  color: white;
+}
+
+/* Auth Pages */
+.auth-container {
+  min-height: 100vh;
+  background-color: var(--primary-color);
+}
+.auth-card {
+  background-color: #A5D6B8; /* Matching the light green in Image 2/3 roughly */
+  border-radius: 12px;
+  overflow: hidden;
+}

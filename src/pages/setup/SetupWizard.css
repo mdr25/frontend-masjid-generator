@@ -1,0 +1,22 @@
+.wizard-header {
+  background-color: #5cb88f !important; /* Adjust to match image green */
+}
+
+.filter-white {
+  filter: brightness(0) invert(1);
+}
+
+.step-item {
+  flex: 1;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+/* Add custom green underline for active step? or just leave text style */
+.step-item.active {
+  border-bottom: 2px solid white;
+}
+
+.wizard-card {
+  min-height: 400px;
+}
