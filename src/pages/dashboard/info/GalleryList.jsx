@@ -14,7 +14,26 @@ const GalleryList = () => {
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("mid_gallery") || "[]");
-    setMediaList(stored);
+    if (stored.length === 0) {
+      const seeds = [
+        {
+          id: 1,
+          type: "foto",
+          url: "https://images.unsplash.com/photo-1560626184-524744344bef?q=80&w=1233&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          caption: "Masjid Raya",
+        },
+        {
+          id: 2,
+          type: "foto",
+          url: "https://images.unsplash.com/photo-1547119846-7d4039e02077?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          caption: "Kegiatan Mengaji",
+        },
+      ];
+      setMediaList(seeds);
+      localStorage.setItem("mid_gallery", JSON.stringify(seeds));
+    } else {
+      setMediaList(stored);
+    }
   }, []);
 
   const handleSave = (e) => {

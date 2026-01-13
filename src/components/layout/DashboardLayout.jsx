@@ -73,9 +73,20 @@ const DashboardLayout = () => {
           href="/"
           className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none px-3"
         >
-          <div className="lh-1">
-            <span className="fs-6 d-block fw-bold text-uppercase">Logo</span>
-            <span className="fs-5 fw-bold">Masjid</span>
+          <div className="d-flex align-items-center mb-0">
+            <div
+              className="d-flex align-items-center justify-content-center text-success bg-white rounded-circle me-3"
+              style={{
+                width: "40px",
+                height: "40px",
+              }}
+            >
+              <FaMosque size={20} />
+            </div>
+            <div className="lh-1">
+              <span className="fs-6 d-block fw-bold text-uppercase">Admin</span>
+              <span className="fs-5 fw-bold">Masjid</span>
+            </div>
           </div>
         </a>
         <hr className="bg-white" />

@@ -24,7 +24,8 @@ const KajianList = () => {
     date: "",
     time: "",
     location: "Masjid Utama",
-    image: "https://images.unsplash.com/photo-1599020111771-c9f4293910c2?w=600",
+    image:
+      "https://images.unsplash.com/photo-1584639458904-4c602324dc0e?auto=format&fit=crop&q=80&w=800",
   });
 
   useEffect(() => {

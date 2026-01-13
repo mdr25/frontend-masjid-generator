@@ -38,10 +38,20 @@ apiClient.interceptors.response.use(
 
     // AUTH: LOGIN
     if (config.url === "/auth/login" && config.method === "post") {
-      const { email, password } = JSON.parse(config.data);
+      const { email, password } = config.data; // config.data might already be an object if passed directly? No, axios stringifies it usually, but let's be safe.
+      // Parsed data handling:
+      let payload = config.data;
+      if (typeof payload === "string") {
+        try {
+          payload = JSON.parse(payload);
+        } catch (e) {
+          /* ignore */
+        }
+      }
+
       const users = JSON.parse(localStorage.getItem(DB_KEYS.USERS) || "[]");
       const user = users.find(
-        (u) => u.email === email && u.password === password
+        (u) => u.email === payload.email && u.password === payload.password
       );
 
       if (user) {
@@ -60,12 +70,25 @@ apiClient.interceptors.response.use(
 
     // AUTH: REGISTER
     if (config.url === "/auth/register" && config.method === "post") {
-      const { mosqueName, email, password } = JSON.parse(config.data);
+      let payload = config.data;
+      if (typeof payload === "string") {
+        try {
+          payload = JSON.parse(payload);
+        } catch (e) {
+          /* ignore */
+        }
+      }
+
+      const { mosqueName, email, password } = payload;
+
       const users = JSON.parse(localStorage.getItem(DB_KEYS.USERS) || "[]");
 
       if (users.find((u) => u.email === email)) {
         return Promise.reject({
-          response: { status: 400, data: { message: "Email sudah terdaftar" } },
+          response: {
+            status: 400,
+            data: { message: "Email sudah terdaftar. Silakan login." },
+          },
         });
       }
 
@@ -95,7 +118,7 @@ apiClient.interceptors.response.use(
       });
       localStorage.setItem(DB_KEYS.PROFILES, JSON.stringify(profiles));
 
-      return { data: { message: "Registrasi berhasil" } };
+      return { data: { message: "Registrasi berhasil", user: newUser } };
     }
 
     // AUTH: LOGOUT

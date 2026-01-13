@@ -33,9 +33,10 @@ const LoginPage = () => {
         navigate("/setup");
       }
     } catch (err) {
+      console.error("Login Fail:", err);
       setError(
         err.response?.data?.message ||
-          "Gagal login. Periksa koneksi atau kredensial."
+          "Gagal login. Pastikan email dan password benar."
       );
     } finally {
       setLoading(false);

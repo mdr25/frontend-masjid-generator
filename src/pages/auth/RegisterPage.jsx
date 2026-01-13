@@ -36,22 +36,19 @@ const RegisterPage = () => {
     setLoading(true);
     try {
       const { mosqueName, email, password } = formData;
+      // 1. Register
       await authService.register({ mosqueName, email, password });
-      // Redirect to Setup Wizard instead of Login/Dashboard
-      // For immediate access flow:
-      // await authService.login(email, password);
-      // navigate('/setup');
 
-      // But looking at existing code it probably redirects to Login?
-      // "Registrasi berhasil, silakan login"
-      // The user wants "Buat Akun/Login -> Setup Website Template".
-      // So after Register, we should probably auto-login and go to Setup.
+      // 2. Auto Login
+      const { user } = await authService.login(email, password);
 
-      // Let's modify to auto-login for smoother UX
-      await authService.login(email, password);
+      // 3. Redirect to Setup
       navigate("/setup");
     } catch (err) {
-      setError(err.response?.data?.message || "Gagal mendaftar.");
+      console.error(err);
+      setError(
+        err.response?.data?.message || "Gagal mendaftar. Silakan coba lagi."
+      );
     } finally {
       setLoading(false);
     }

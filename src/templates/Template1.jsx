@@ -14,6 +14,7 @@ import {
   FaYoutube,
   FaTwitter,
   FaArrowRight,
+  FaMosque,
 } from "react-icons/fa";
 
 // Template 1 Design - "Earthy Modern"
@@ -51,7 +52,7 @@ const Template1 = ({ data }) => {
             summary: "Persiapan menyambut bulan suci penuh berkah.",
             date: "30 Mar 2023",
             image:
-              "https://images.unsplash.com/photo-1627622340536-398df9911e86?w=600",
+              "https://images.unsplash.com/photo-1561314945-0562f5b6d2c6?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
           {
             id: 2,
@@ -59,7 +60,7 @@ const Template1 = ({ data }) => {
             summary: "Persiapan menyambut bulan suci penuh berkah.",
             date: "15 Apr 2023",
             image:
-              "https://images.unsplash.com/photo-1599020111771-c9f4293910c2?w=600",
+              "https://images.unsplash.com/photo-1636985418926-6752c84bf50a?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
         ];
 
@@ -71,25 +72,25 @@ const Template1 = ({ data }) => {
             id: 1,
             title: "TPQ Ibnu Sina",
             image:
-              "https://images.unsplash.com/photo-1584639458904-4c602324dc0e?w=600",
+              "https://images.unsplash.com/photo-1712249239167-18cb9e056ee6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
           {
             id: 2,
             title: "Ngaji Ahad Pagi",
             image:
-              "https://images.unsplash.com/photo-1614945763130-9b6264d84f23?w=600",
+              "https://images.unsplash.com/photo-1547119846-7d4039e02077?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
           {
             id: 3,
             title: "Wakaf",
             image:
-              "https://images.unsplash.com/photo-1564769625905-50e93615e958?w=600",
+              "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?auto=format&fit=crop&q=80&w=800",
           },
           {
             id: 4,
             title: "Tahsin Al-Qur'an",
             image:
-              "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600",
+              "https://images.unsplash.com/photo-1649030839339-3d117544fcb4?q=80&w=1132&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
           },
         ];
 
@@ -112,7 +113,7 @@ const Template1 = ({ data }) => {
               className="bg-success rounded-circle me-2 d-flex align-items-center justify-content-center text-white fw-bold"
               style={{ width: 40, height: 40 }}
             >
-              <span style={{ fontSize: "0.6rem" }}>LOGO</span>
+              <FaMosque size={20} />
             </div>
             <div className="lh-1">
               <h6 className="mb-0 fw-bold">{profile.name}</h6>
@@ -189,7 +190,7 @@ const Template1 = ({ data }) => {
               <img
                 src={
                   data?.hero?.image ||
-                  "https://images.unsplash.com/photo-1596401918338-78c66044dfb2?q=80&w=2070&auto=format&fit=crop"
+                  "https://images.unsplash.com/photo-1560626184-524744344bef?q=80&w=1233&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 }
                 alt="Masjid Hero"
                 className="img-fluid"
@@ -270,7 +271,7 @@ const Template1 = ({ data }) => {
                 <img
                   src={
                     data?.profile?.image ||
-                    "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?w=800"
+                    "https://images.unsplash.com/flagged/photo-1554398912-87ad6a73dbb6?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   }
                   className="img-fluid rounded-3"
                   alt="Profil"
@@ -335,7 +336,7 @@ const Template1 = ({ data }) => {
                     alt={prog.title}
                   />
                   <div className="position-absolute top-0 start-0 p-4">
-                    <h3 className="fw-bold text-dark">{prog.title}</h3>
+                    <h3 className="fw-bold text-white">{prog.title}</h3>
                   </div>
                 </div>
               </Col>
@@ -415,7 +416,7 @@ const Template1 = ({ data }) => {
           <Row className="g-4">
             <Col md={6}>
               <img
-                src="https://images.unsplash.com/photo-1542385151-ef28badca83c?w=600"
+                src="https://images.unsplash.com/photo-1683828936769-92c51298885c?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="w-100 rounded shadow-sm"
                 style={{ height: "250px", objectFit: "cover" }}
                 alt=""
@@ -423,7 +424,7 @@ const Template1 = ({ data }) => {
             </Col>
             <Col md={6}>
               <img
-                src="https://images.unsplash.com/photo-1542385151-ef28badca83c?w=600"
+                src="https://images.unsplash.com/photo-1684502843929-14da5854c60d?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="w-100 rounded shadow-sm"
                 style={{ height: "250px", objectFit: "cover" }}
                 alt=""
@@ -431,7 +432,7 @@ const Template1 = ({ data }) => {
             </Col>
             <Col md={6}>
               <img
-                src="https://images.unsplash.com/photo-1584639458904-4c602324dc0e?w=600"
+                src="https://images.unsplash.com/photo-1711202675990-815384b2f1fd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="w-100 rounded shadow-sm"
                 style={{ height: "250px", objectFit: "cover" }}
                 alt=""
@@ -439,7 +440,7 @@ const Template1 = ({ data }) => {
             </Col>
             <Col md={6}>
               <img
-                src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600"
+                src="https://images.unsplash.com/photo-1651293478838-1f51675131c5?q=80&w=1175&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 className="w-100 rounded shadow-sm"
                 style={{ height: "250px", objectFit: "cover" }}
                 alt=""

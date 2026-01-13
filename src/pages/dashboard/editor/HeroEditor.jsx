@@ -9,7 +9,7 @@ const HeroEditor = () => {
     title: "Bersama Makmur dan Memakmurkan Masjid",
     subtitle: "",
     image:
-      "https://images.unsplash.com/photo-1596401918338-78c66044dfb2?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519817650390-64a93dbad11c?auto=format&fit=crop&q=80&w=1200",
   });
 
   useEffect(() => {
